@@ -3,14 +3,14 @@
 void chline(char, int, int);
 
 int main(void){
-	char w;
+	char w, buffer;
 	int x, y;
 	printf("Please input a character(or q to quit):");
 	w = getchar();
 	while( w != 'q' ){
 		printf("Please input two integers:");
 		while(1){
-			scanf("%d %d", &x, &y)
+			scanf("%d %d", &x, &y);
 			if( x < y ){
 				chline(w, x, y);
 				break;
@@ -18,6 +18,7 @@ int main(void){
 				printf("Please input two integers:");
 		}
 		printf("Please input a character(or q to quit):");
+		buffer = getchar();
 		w = getchar();
 	}
 	printf("Bye\n");
